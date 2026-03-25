@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/vue-query';
 
-const API_BASE = import.meta.env.VITE_ORDER_API || 'http://localhost:3002';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8080';
 
 interface CreateOrderPayload {
   customerName: string;

@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/vue-query';
 
-const API_BASE = import.meta.env.VITE_CATALOG_API || 'http://localhost:3001';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8080';
 
 export interface Lens {
   id: string;
@@ -19,7 +19,7 @@ export function useLenses() {
   return useQuery<Lens[]>({
     queryKey: ['lenses'],
     queryFn: async () => {
-      const response = await fetch(`${API_BASE}/api/lenses`);
+      const response = await fetch(`${API_BASE}/api/catalog/lenses`);
       if (!response.ok) throw new Error('Failed to fetch lenses');
       return response.json();
     },

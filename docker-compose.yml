@@ -97,13 +97,28 @@ services:
       rabbitmq:
         condition: service_healthy
 
+  gateway:
+    build: ./gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      catalog-service:
+        condition: service_started
+      order-service:
+        condition: service_started
+      notification-service:
+        condition: service_started
+
   frontend:
     build: ./frontend/suilens-frontend
     ports:
       - "5173:5173"
     environment:
-      VITE_CATALOG_API: http://localhost:3001
-      VITE_ORDER_API: http://localhost:3002
+      VITE_API_BASE: http://localhost:8080
+      VITE_WS_URL: ws://localhost:8080/ws/notifications
+    depends_on:
+      gateway:
+        condition: service_started
 
 volumes:
   catalog_pgdata:
