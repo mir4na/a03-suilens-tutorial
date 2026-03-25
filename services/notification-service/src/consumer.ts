@@ -31,11 +31,9 @@ export async function startConsumer() {
     }
   }
 
-  let retries = 0;
-  const maxRetries = 10;
   const retryDelay = 2000;
 
-  while (retries < maxRetries) {
+  for (let attempt = 1; ; attempt += 1) {
     try {
       const connection = await amqplib.connect(RABBITMQ_URL);
       const channel = await connection.createChannel();
@@ -90,18 +88,11 @@ export async function startConsumer() {
 
       return;
     } catch (error) {
-      retries++;
       console.warn(
-        `Failed to connect to RabbitMQ (attempt ${retries}/${maxRetries}):`,
+        `Failed to connect to RabbitMQ (attempt ${attempt}):`,
         (error as Error).message,
       );
-      if (retries < maxRetries) {
-        await new Promise((resolve) => setTimeout(resolve, retryDelay));
-      }
+      await new Promise((resolve) => setTimeout(resolve, retryDelay));
     }
   }
-
-  console.error(
-    "Failed to connect to RabbitMQ after maximum retries. Continuing without consumer.",
-  );
 }

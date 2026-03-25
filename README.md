@@ -61,15 +61,15 @@ Expected result:
 
 ## Docker Images
 
-Docker Hub namespace: `mir4nanightf4ll`
+Docker Hub namespace: `mirananightfall`
 
 Images to publish:
 
-- `mir4nanightf4ll/a03-suilens-catalog`
-- `mir4nanightf4ll/a03-suilens-order`
-- `mir4nanightf4ll/a03-suilens-notification`
-- `mir4nanightf4ll/a03-suilens-gateway`
-- `mir4nanightf4ll/a03-suilens-frontend`
+- `mirananightfall/a03-suilens-catalog`
+- `mirananightfall/a03-suilens-order`
+- `mirananightfall/a03-suilens-notification`
+- `mirananightfall/a03-suilens-gateway`
+- `mirananightfall/a03-suilens-frontend`
 
 ## Kubernetes Deployment
 
@@ -101,11 +101,11 @@ Deployment target:
 - `[SCREENSHOT_PLACEHOLDER_FRONTEND_AFTER_POST]`
 - `[SCREENSHOT_PLACEHOLDER_KUBECTL_GET_PODS_O_WIDE]`
 
-## Submission Links Placeholders
+## Submission Links
 
-- `[DOCKER_HUB_LINK_CATALOG]`
-- `[DOCKER_HUB_LINK_ORDER]`
-- `[DOCKER_HUB_LINK_NOTIFICATION]`
-- `[DOCKER_HUB_LINK_GATEWAY]`
-- `[DOCKER_HUB_LINK_FRONTEND]`
+- `https://hub.docker.com/r/mirananightfall/a03-suilens-catalog`
+- `https://hub.docker.com/r/mirananightfall/a03-suilens-order`
+- `https://hub.docker.com/r/mirananightfall/a03-suilens-notification`
+- `https://hub.docker.com/r/mirananightfall/a03-suilens-gateway`
+- `https://hub.docker.com/r/mirananightfall/a03-suilens-frontend`
 - `[GITHUB_REPOSITORY_LINK]`
