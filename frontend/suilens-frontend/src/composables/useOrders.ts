@@ -21,8 +21,19 @@ export function useCreateOrder() {
         body: JSON.stringify(payload),
       });
       if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.error || 'Failed to create order');
+        const raw = await response.text();
+
+        try {
+          const error = JSON.parse(raw);
+          const message =
+            error?.error ||
+            error?.message ||
+            error?.summary ||
+            raw;
+          throw new Error(message || 'Failed to create order');
+        } catch {
+          throw new Error(raw || 'Failed to create order');
+        }
       }
       return response.json();
     },

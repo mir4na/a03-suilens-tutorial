@@ -94,12 +94,12 @@ Deployment target:
 
 ## Screenshot Placeholders
 
-- `[SCREENSHOT_PLACEHOLDER_OPENAPI_CATALOG]`
-- `[SCREENSHOT_PLACEHOLDER_OPENAPI_ORDER]`
-- `[SCREENSHOT_PLACEHOLDER_OPENAPI_NOTIFICATION]`
-- `[SCREENSHOT_PLACEHOLDER_FRONTEND_BEFORE_POST]`
-- `[SCREENSHOT_PLACEHOLDER_FRONTEND_AFTER_POST]`
-- `[SCREENSHOT_PLACEHOLDER_KUBECTL_GET_PODS_O_WIDE]`
+- ![alt text](image.png)
+- ![alt text](image-1.png)
+- ![alt text](image-2.png)
+- ![alt text](image-3.png)
+- ![alt text](image-4.png)
+- ![alt text](image-5.png)
 
 ## Submission Links
 
