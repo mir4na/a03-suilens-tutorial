@@ -108,4 +108,3 @@ Deployment target:
 - `https://hub.docker.com/r/mirananightfall/a03-suilens-notification`
 - `https://hub.docker.com/r/mirananightfall/a03-suilens-gateway`
 - `https://hub.docker.com/r/mirananightfall/a03-suilens-frontend`
-- `[GITHUB_REPOSITORY_LINK]`
